@@ -7,7 +7,6 @@ test.describe('Product Management', () => {
 
     test('Add a new product and verify it’s added successfully', async ({ page }) => {
         const productPage = new ProductPage(page);
-        await productPage.navigateTo('/');
         productName = await productPage.addProduct();
         console.log('Added Product Name:', productName);
     });

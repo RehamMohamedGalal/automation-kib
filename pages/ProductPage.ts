@@ -5,7 +5,7 @@ export class ProductPage extends BasePage {
 
     async addProduct() {
         // Click on Add a new product icon
-        await this.clickElement('a[href="/add"] >> svg');
+        await this.clickElement('add-product');
 
         // Generate random product name and description
         const randomProductName = faker.commerce.productName();
@@ -41,7 +41,7 @@ export class ProductPage extends BasePage {
     }
 
     async deleteProduct() {
-        const itemTitleSelector = '#root > div > main > div > div > div > div.grid.grid-cols-4.gap-7 > div:nth-child(1) > div.sc-kuWgmH.brWvPg.mt-4.cursor-pointer';
+        const itemTitleSelector = '';
         const itemTitle = await this.page.textContent(itemTitleSelector);
         console.log('Item Title to Delete:', itemTitle);
 
